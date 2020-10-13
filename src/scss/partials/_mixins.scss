@@ -1,0 +1,43 @@
+@import "params";
+
+@mixin clear {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin clear-list {
+  @include clear();
+  list-style: none;
+}
+
+@mixin flex-center($dir: column, $justify-content: space-between) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify-content;
+  align-items: center;
+}
+@mixin btn($bg: #43a047, $padding: 14px, $font-size: 1rem) {
+  background-color: $bg;
+  padding: $padding;
+  border-radius: 5px;
+  font-size: $font-size;
+}
+
+// @import "params";
+
+// @mixin flex-center($dir:column) {
+//     display: flex;
+//     flex-direction: $dir;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+// @mixin package-color($color:$yellow) {
+//     & .item_value {
+//         color: $color;
+//     }
+
+//     & .tile_cost {
+//         border-bottom-color: $color !important;
+//     }
+// }

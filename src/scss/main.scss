@@ -1,0 +1,182 @@
+@import "partials/mixins";
+@import "partials/params";
+
+@font-face {
+  font-family: "lbet-mt";
+  src: url("./fonts/lbet-mt-light.woff2") format("woff2"),
+    url("./fonts/lbet-mt-light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "lbet-mt";
+  src: url("./fonts/lbet-mt-regular.woff2") format("woff2"),
+    url("../fonts/lbet-mt-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "lbet-mt";
+  src: url("./fonts/lbet-mt-bold.woff2") format("woff2"),
+    url("../fonts/lbet-mt-bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "lbet-mt";
+  src: url("./fonts/lbet-mt-black.woff2") format("woff2"),
+    url("../fonts/lbet-mt-black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+//end new
+
+@font-face {
+  font-family: "BPGArial2010";
+  src: url("./fonts/BPGArial2010.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/BPGArial2010.woff") format("woff"),
+    url("../fonts/BPGArial2010.ttf") format("truetype"),
+    url("../fonts/BPGArial2010.svg#BPGArial2010") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+10D0-10F0;
+}
+
+@font-face {
+  font-family: "BPGArialCaps2010";
+  src: url("./fonts/BPGArialCaps2010.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/BPGArialCaps2010.woff") format("woff"),
+    url("../fonts/BPGArialCaps2010.ttf") format("truetype"),
+    url("../fonts/BPGArialCaps2010.svg#BPGArialCaps2010") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+10D0-10F0;
+}
+
+@font-face {
+  font-family: "Datebashvili";
+  src: url("./fonts/hinted-Datebashvili.eot");
+  src: url("../fonts/hinted-Datebashvili.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/hinted-Datebashvili.woff2") format("woff2"),
+    url("../fonts/hinted-Datebashvili.woff") format("woff"),
+    url("../fonts/hinted-Datebashvili.ttf") format("truetype"),
+    url("../fonts/hinted-Datebashvili.svg#Datebashvili") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "gpbMtavruliBold";
+  src: url("./fonts/gpbMtavruliBold.woff2") format("woff2"),
+    url("../fonts/gpbMtavruliBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "! BPG GEL";
+  src: url("./fonts/hinted-BPGGEL.eot");
+  src: local("! BPG GEL"), local("!BPGGEL"),
+    url("../fonts/hinted-BPGGEL.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/hinted-BPGGEL.woff") format("woff"),
+    url("../fonts/hinted-BPGGEL.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "lbet-nus";
+  src: url("./fonts/LBetSTDNus-Medium.woff2") format("woff2"),
+    url("../fonts/LBetSTDNus-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "lbet-nus";
+  src: url("./fonts/LBetSTDNus-Bold.woff2") format("woff2"),
+    url("../fonts/LBetSTDNus-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "lbet-mt";
+  src: url("./fonts/LBetSTDMT-Regular.woff2") format("woff2"),
+    url("../fonts/LBetSTDMT-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "lbet-mt";
+  src: url("./fonts/LBetSTDMT-Bold.woff2") format("woff2"),
+    url("../fonts/LBetSTDMT-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+html,
+body {
+  @include clear;
+  width: 100%;
+  color: $font-color;
+  background-color: black;
+  font-family: "lbet-nus";
+  font-size: 16px;
+}
+
+.view-port {
+  width: $view-port;
+  margin: 10px auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  @include clear;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pop_up_wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: $content-bg;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .pop_up {
+    padding: 0 10px;
+    height: 100%;
+  }
+}
+
+input {
+  outline: none;
+  background: none;
+  border: none;
+}
+
+.pop_up_content_information_cards {
+  & .card {
+    &.bg {
+      & .card_bottom_path {
+        background-color: #ff671b;
+      }
+    }
+    &.tb {
+      & .card_bottom_path {
+        background-color: #00aeef;
+      }
+    }
+  }
+}

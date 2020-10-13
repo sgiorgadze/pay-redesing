@@ -1,0 +1,19 @@
+@import "partials/mixins";
+@import "partials/params";
+.pop_up_content_information {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 82%;
+  background-color: #fff;
+  h1 {
+    color: black;
+    font-size: 0.82rem;
+    font-weight: normal;
+  }
+  & .pop_up_content_information_cards {
+    display: flex;
+    overflow: auto;
+    padding: 16px 0;
+  }
+}

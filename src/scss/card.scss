@@ -1,0 +1,76 @@
+@import "partials/mixins";
+@import "partials/params";
+
+.pop_up_content_information {
+  & .pop_up_content_information_cards {
+    & .card {
+      position: relative;
+      width: 224px;
+      height: 134px;
+      background-color: #f1f1f1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      & .card_top_path {
+        position: relative;
+        z-index: 10;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-between;
+
+        & .card_logo {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+        }
+        & .card_validity {
+          color: #828282;
+          font-size: 0.875rem;
+        }
+        & .mony {
+          display: none;
+          justify-content: space-around;
+          transition: all 0.5s;
+
+          & .mony_amount {
+            @include btn($bg: #ffff);
+            padding: 10px 14px;
+            width: 70px;
+          }
+          & .mony_pay {
+            @include btn($bg: rgb(67, 95, 160), $font-size: 0.75rem);
+            padding: 10px 14px;
+          }
+        }
+      }
+      & .card_bottom_path {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 46px;
+        position: relative;
+        z-index: 9;
+        transition: all 0.5s;
+      }
+      &:hover {
+        .card_bottom_path {
+          height: 20px;
+          > div {
+            display: none;
+          }
+        }
+        .card_validity {
+          display: none;
+        }
+        .mony {
+          display: flex;
+        }
+      }
+    }
+  }
+}
