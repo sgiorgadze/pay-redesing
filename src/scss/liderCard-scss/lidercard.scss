@@ -1,0 +1,676 @@
+@import "../partials/mixins";
+@import "../partials/params";
+
+.pop_up_header {
+  .pop_up_header_right_path-close {
+    margin-right: 34px;
+    cursor: pointer;
+  }
+}
+.pop_up_content_information {
+  .order_new_liderCard {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    .order_card {
+      display: flex;
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 30px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      flex-grow: 1;
+      .lider_card_img {
+        position: relative;
+        img {
+          filter: drop-shadow(0 30px 60px rgba(10, 48, 152, 0.5));
+        }
+
+        &.done {
+          img {
+            box-shadow: none;
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 98%;
+            left: 0;
+            top: 0;
+            background-color: #32cc4d;
+            border-radius: 13px;
+            opacity: 41%;
+            z-index: 10;
+          }
+        }
+
+        .lider_card_accepted_img_done {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 20;
+        }
+      }
+      .order_new_card_accepted_block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .order_new_liderCard_accepted_text {
+          color: #54596a;
+          font-size: 1rem;
+          font-family: LBet STD MT;
+        }
+        .order_new_liderCard_accepted_sms {
+          margin: 11px 0 30px 0;
+          color: #4e5c67;
+          font-size: 0.75rem;
+        }
+        .order_new_card_accepted_done_btn {
+          @include btn($bg: #9ba7b4, $font-size: 1rem);
+          padding: 11.5px 28px;
+
+          color: #ffff;
+          text-align: center;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .order_new_liderCard_title {
+      color: #54596a;
+      font-size: 1rem;
+      font-family: "BPGArial2010";
+    }
+    .order_new_liderCard_button {
+      display: flex;
+      width: 142px;
+      height: 46px;
+      padding-left: 20px;
+      align-items: center;
+      background-color: #3eb553;
+      border-radius: 50px;
+      p {
+        margin-left: 10px;
+        color: #ffffff;
+        font-size: 1.0625rem;
+      }
+    }
+    .order_new_liderCard_link_info {
+      color: #435fa0;
+      font-size: 0.8125rem;
+      text-decoration: underline;
+    }
+    .services {
+      position: relative;
+      width: 100%;
+      height: 100px;
+      padding: 20px 21px 15px 21px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #f9fafb;
+      .services_item {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        .services_item_text {
+          color: #585f70;
+          font-size: 0.8125rem;
+          text-align: center;
+        }
+      }
+      &.card_info {
+        justify-content: flex-start;
+        img {
+          margin-right: 39px;
+        }
+      }
+      .join_card_tile {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+        .join_card_tile_right-path {
+          display: flex;
+          .join_card_tile_img {
+            margin-top: 5px;
+          }
+          .join_card_text {
+            flex-basis: 72%;
+            height: 100%;
+            margin-left: 17px;
+            display: flex;
+            flex-direction: column;
+            p {
+              color: #343434;
+              font-size: 0.8125rem;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+      .join_card_button {
+        width: 185px;
+        height: 44px;
+        color: #ffffff;
+        font-size: 1rem;
+        line-height: 44px;
+        text-align: center;
+        background-color: #9ba7b4;
+        border-radius: 5px;
+      }
+      .card_join_accept {
+        width: 100%;
+        height: 100%;
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+
+        .card_join_accept_text {
+          flex-basis: 47%;
+          color: #343434;
+          font-size: 0.8125rem;
+          line-height: 17px;
+        }
+      }
+
+      &.join_card {
+        &:hover {
+          background-color: #fff5cb;
+          .join_card_tile {
+            display: none;
+          }
+          .card_join_accept {
+            display: flex;
+          }
+          .pop_up_header_right_path-turnOff {
+            display: flex;
+            flex-grow: 0;
+            flex-basis: 43%;
+          }
+        }
+      }
+    }
+
+    .order_new_liderCard_sms_confirm {
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: 30.5px;
+      }
+      .order_new_liderCard_sms_confirm_title {
+        color: #868895;
+        font-size: 0.8125rem;
+        text-transform: uppercase;
+      }
+      .order_new_liderCard_sms_confirm_has_sent {
+        position: relative;
+        margin: 0 10px 0 20px;
+        input {
+          position: relative;
+          width: 188px;
+          height: 41px;
+          padding: 5px;
+          border: 1px solid #c6ccd1;
+          border-radius: 5px;
+          text-indent: 20px;
+        }
+        .order_new_liderCard_input-sms {
+          position: absolute;
+          padding: 9px 8px;
+          top: 50%;
+          right: -13px;
+          background-color: #dcdfe2;
+          border-radius: 3px;
+          text-transform: uppercase;
+          transform: translate(-50%, -50%);
+          p {
+            color: #7b8a9a;
+            font-size: 0.6875rem;
+            font-family: "lbet-mt";
+          }
+        }
+      }
+      .order_new_liderCard_sms_confirm_button {
+        @include btn($bg: #3e42b5, $font-size: 0.93rem);
+        width: 102px;
+        padding: 10.5px 13.5px;
+        border-radius: 3px;
+        color: #ffff;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.order_new_liderCard {
+  .liderCard_card {
+    width: 100%;
+    flex-grow: 1;
+    .liderCard_card_title {
+      display: flex;
+      padding: 0 35px 0 25px;
+      justify-content: space-between;
+      h1 {
+        margin-left: 0px;
+        color: #343434;
+        font-size: 0.8125rem;
+      }
+      .liderCard_card_title-turnOff {
+        display: flex;
+        align-items: center;
+        p {
+          font-size: 0.8125rem;
+          text-transform: uppercase;
+        }
+        .toggle_btn {
+          position: relative;
+          width: 44px;
+          height: 24px;
+          margin-left: 10px;
+          padding: 3px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          background-color: #c3d2e1;
+          border-radius: 20px;
+          cursor: pointer;
+
+          .toggle_btn_green {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: #3eb553;
+
+            cursor: pointer;
+          }
+          &:hover {
+            justify-content: flex-start;
+
+            .toggle_btn_green {
+              background-color: #89939f;
+            }
+          }
+        }
+      }
+      .limit_info {
+        color: #435fa0;
+        font-size: 0.8125rem;
+      }
+    }
+  }
+  .lider_cards_block {
+    display: flex;
+    padding: 19px 14px 10px;
+    overflow-x: scroll;
+    .card {
+      position: relative;
+      display: flex;
+      min-width: 224px;
+      height: 134px;
+      margin-right: 10px;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: #f1f1f1;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      .lider_card_pay {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        .card_top_path {
+          position: relative;
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+          justify-content: space-between;
+          .card_logo {
+            height: 26px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+          }
+          .mony {
+            display: none;
+            justify-content: space-around;
+            transition: all 0.2s;
+            &::placeholder {
+              color: #868895;
+            }
+            .mony_amount {
+              height: 37px;
+              width: 105px;
+              padding: 14px;
+              font-size: 0.75rem;
+              background-color: #ffff;
+              border-radius: 5px;
+            }
+            .mony_pay {
+              width: 85px;
+              height: 37px;
+              padding: 0;
+              text-align: center;
+              font-size: 0.75rem;
+              line-height: 37px;
+              color: #ffff;
+              background-color: #435fa0;
+              border-radius: 5px;
+            }
+          }
+          .card_validity {
+            margin-left: 15px;
+            display: block;
+            color: #828282;
+            font-size: 0.875rem;
+            font-family: "lbet-mt";
+          }
+        }
+        .card_bottom_path {
+          position: relative;
+          height: 46px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          color: #ffff;
+          font-family: "lbet-mt";
+          background-color: #525d65;
+          transition: all 0.2s;
+        }
+        &.add_new_card {
+          background-color: #d4e6daed;
+          .add_card_plus {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 25;
+          }
+          .add_new_card_onhover {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #3eb553;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 26;
+            p {
+              margin-top: 9px;
+              font-size: 0.8125rem;
+              color: #f6f6f6;
+            }
+          }
+          &:hover {
+            .add_new_card_onhover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      &:hover {
+        & .card_top_path {
+          justify-content: flex-start;
+          & .card_logo {
+            margin-bottom: 20px;
+          }
+          & .card_validity {
+            display: none;
+          }
+          & .mony {
+            display: flex;
+          }
+        }
+        & .card_bottom_path {
+          height: 12px;
+          > div {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.liderCard_card {
+  .lider_card_section {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 69px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 14px 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    .lider_card_section_img {
+      width: 20%;
+    }
+    .information_icon {
+      position: relative;
+      cursor: pointer;
+    }
+    .lider_card_section_btns {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      > div {
+        height: 41px;
+      }
+      .lider_card_section_cardnumber {
+        display: flex;
+        width: 215px;
+        padding: 0 20px 0 10px;
+        align-items: center;
+        color: #474958;
+        font-family: "lbet-mt";
+        font-size: 0.8125rem;
+        justify-content: space-around;
+        border-radius: 3px;
+        background-color: #e6e6e6;
+      }
+      .lider_card_section_amount {
+        position: relative;
+        input {
+          position: relative;
+          width: 112px;
+          height: 41px;
+          margin: 0 8px;
+          padding: 12px 10px;
+          background-color: #e6e6e6;
+          border-radius: 3px;
+          &:focus {
+            &:focus {
+              background-color: #fff;
+              border: 1px solid #c6ccd1;
+            }
+          }
+        }
+      }
+      .lider_card_section_replenish {
+        width: 102px;
+        background-color: #3eb553;
+        border-radius: 3px;
+        font-size: 0.93rem;
+        line-height: 41px;
+        color: #ffff;
+        text-align: center;
+      }
+      .lider_card_section_cash {
+        width: 88px;
+        background-color: #435fa0;
+        border-radius: 3px;
+        font-size: 0.93rem;
+        line-height: 41px;
+        color: #ffff;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+
+.lider_cards_block {
+  display: flex;
+  padding: 19px 14px 10px;
+  overflow-x: scroll;
+  &::-webkit-scrollbar {
+    scrollbar-width: 14px;
+  }
+  &::-webkit-scrollbar {
+    height: 3px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #c8d1db;
+  }
+}
+
+.withdrawal_money_section {
+  position: relative;
+  width: 100%;
+  margin-bottom: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-grow: 1;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  .withdrawal_money_title {
+    display: flex;
+    width: 100%;
+    height: 69px;
+    padding: 10px 14px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .withdrawal_money_block {
+    width: 100%;
+    height: 100%;
+    padding: 38px;
+    border-top: 1px solid #dedede;
+    .withdrawal_money_block-top {
+      display: flex;
+      padding-bottom: 23px;
+      border-bottom: 1px solid #a5a9bf;
+      .amount_info {
+        margin-right: 100px;
+        .amount_info_title {
+          margin-bottom: 8px;
+          color: #454a65;
+          font-size: 0.9375rem;
+        }
+        .amount_info_quantity {
+          display: flex;
+          align-items: center;
+          color: #323e54;
+          text-transform: uppercase;
+          font-size: 2rem;
+          p {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    .withdrawal_money_block-bottom {
+      position: relative;
+      padding-top: 30.5px;
+      display: flex;
+      flex-direction: column;
+      .withdrawal_money_block-bottom-confirm {
+        display: flex;
+        align-items: center;
+        .withdrawal_money_block-bottom_title {
+          color: #868895;
+          font-size: 0.8125rem;
+          text-transform: uppercase;
+        }
+        .withdrawal_money_block-bottom_sms_button {
+          position: relative;
+          margin: 0 10px 0 20px;
+          input {
+            position: relative;
+            width: 188px;
+            height: 41px;
+            padding: 5px;
+            border: 1px solid #c6ccd1;
+            border-radius: 5px;
+            text-indent: 20px;
+          }
+        }
+      }
+      .refresh {
+        display: flex;
+        margin-top: 10px;
+        margin-left: 9.375rem;
+        align-items: center;
+        .refresh_link {
+          margin-left: 10px;
+          color: #6c7e95;
+          font-size: 0.75rem;
+          text-decoration: underline;
+        }
+      }
+    }
+    &.sync {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 67px;
+
+      .cancel_sync_title {
+        margin: 12px 0;
+        font-size: 1rem;
+        color: #e20d00;
+      }
+      .cancel_sync_text {
+        text-align: center;
+        color: #4e5c67;
+        font-size: 0.75rem;
+      }
+      .sync_title {
+        margin-top: 20px;
+        font-size: 1rem;
+        color: #54596a;
+        text-align: center;
+      }
+      .sync_text {
+        margin: 10px 0 36px;
+        color: #4e5c67;
+        font-size: 0.75rem;
+        text-align: center;
+        &.confirmation {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

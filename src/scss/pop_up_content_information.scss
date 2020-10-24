@@ -2,18 +2,138 @@
 @import "partials/params";
 .pop_up_content_information {
   display: flex;
-  flex-direction: column;
-  padding: 20px;
   width: 82%;
+  padding: 16px 10px 10px;
+  flex-direction: column;
   background-color: #fff;
+  border-radius: 0px 5px 5px 5px;
+  &.other_provaiders {
+    min-height: 616px;
+  }
   h1 {
+    margin-left: 41px;
     color: black;
     font-size: 0.82rem;
     font-weight: normal;
   }
   & .pop_up_content_information_cards {
     display: flex;
-    overflow: auto;
-    padding: 16px 0;
+    padding: 19px 24px 10px;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      scrollbar-width: 14px;
+    }
+    &::-webkit-scrollbar {
+      height: 3px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #c8d1db;
+    }
+    &::-webkit-scrollbar-track-piece:end {
+      margin-right: 200px;
+    }
+    &::-webkit-scrollbar-track-piece:start {
+      margin-left: 150px;
+    }
+  }
+  .pop_up_content_information-tile {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    .pop_up_content_information-tile_title {
+      margin-top: 20px;
+      color: #54596a;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    p {
+      margin-top: 6px;
+      color: #959fa7;
+      font-size: 0.75rem;
+    }
+    & .receipt {
+      display: flex;
+      align-items: center;
+      margin: 22px 0 0;
+      a {
+        margin-left: 15px;
+        font-size: 0.81rem;
+        color: #4053a1;
+        text-decoration: underline;
+      }
+    }
+    .pop_up_content_information-tile-closebtn {
+      @include btn($bg: #3eb553);
+      margin-top: 47px;
+      padding: 12px 18px;
+      color: #fff;
+    }
+  }
+  .pop_up_content_information_bankCards {
+    padding-top: 10px;
+  }
+}
+
+.pop_up_content_information {
+  &.pay_money_provaiders {
+    min-height: 616px;
+  }
+
+  .provaiders_item {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 69px;
+    margin-bottom: 10px;
+    padding: 14px 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    .provaiders_item_logo {
+      width: 55%;
+    }
+    .provaiders_item_btns {
+      width: 32.5%;
+      display: flex;
+      justify-content: space-between;
+      .provaiders_item_btns_amount {
+        input {
+          width: 123px;
+          height: 41px;
+          background-color: #e6e6e6;
+          text-indent: 10px;
+          border-radius: 3px;
+          &::placeholder {
+            color: #868895;
+          }
+          &:focus {
+            background-color: #fff;
+            border: 1px solid #c6ccd1;
+          }
+        }
+        font-size: 0.81rem;
+      }
+      .provaiders_item_btns_replenish {
+        width: 102px;
+        height: 41px;
+        text-align: center;
+        color: #fff;
+        background-color: #3eb553;
+        line-height: 41px;
+        border-radius: 3px;
+      }
+    }
   }
 }

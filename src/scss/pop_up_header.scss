@@ -4,43 +4,53 @@
 .pop_up_header {
   width: 100%;
   display: flex;
+  padding: 0.625rem 0;
   align-items: center;
   justify-content: space-between;
-  padding: 0.625rem 0;
-
   & .pop_up_header__buttons {
     display: flex;
+    flex: 2 0 0;
+    color: #ffffff;
     & .replenish_btn {
       @include btn();
-      display: flex;
       margin-right: 0.625rem;
       p {
         margin-left: 0.77rem;
         font-size: 1rem;
       }
+      &.deactivate-bg {
+        background-color: $deactivate-bg;
+      }
     }
     & .cash_withdrawal_btn {
       @include btn($bg: #c3c9ce);
-      display: flex;
       p {
-        padding-left: 0.89rem;
+        margin-left: 0.77rem;
+      }
+      &.blue-active {
+        background-color: $blue-active-class-bg;
       }
     }
   }
-  & .pop_up_header_right_path {
+  & .pop_up_header_right_path-turnOn {
     display: flex;
+    flex: 1 0 0;
+    justify-content: space-around;
     align-items: center;
     padding-right: 0.625rem;
     text-transform: uppercase;
-    color: black;
+    & .pop_up_header_right_path-close {
+      &.sms_confirm {
+        margin-right: 0;
+      }
+    }
+
     & .pop_up_header_right_path-title {
-      display: flex;
+      font-size: 0.81rem;
     }
     & .toggle_btn {
       width: 44px;
       height: 24px;
-      margin: 0 2.68rem 0 0.625rem;
-
       padding: 3px;
       background-color: #c3d2e1;
       border-radius: 20px;
@@ -49,8 +59,8 @@
       align-items: center;
       justify-content: flex-end;
       & .toggle_btn_green {
-        width: 19px;
-        height: 19px;
+        width: 18px;
+        height: 18px;
         border-radius: 50%;
         background-color: #3eb553;
         cursor: pointer;

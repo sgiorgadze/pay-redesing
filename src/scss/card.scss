@@ -5,72 +5,161 @@
   & .pop_up_content_information_cards {
     & .card {
       position: relative;
-      width: 224px;
-      height: 134px;
-      background-color: #f1f1f1;
       display: flex;
+      min-width: 224px;
+      height: 134px;
+      margin-right: 10px;
       flex-direction: column;
       justify-content: space-between;
       border-radius: 10px;
+      background-color: #f1f1f1;
       overflow: hidden;
       cursor: pointer;
-      & .card_top_path {
-        position: relative;
-        z-index: 10;
-        padding: 10px;
+      & .card_pay {
         display: flex;
         flex-direction: column;
         flex-grow: 1;
-        justify-content: space-between;
-
-        & .card_logo {
+        & .card_top_path {
+          position: relative;
           display: flex;
+          padding: 10px;
+          flex-direction: column;
           justify-content: space-between;
-          align-items: flex-start;
+          flex-grow: 1;
+          & .card_logo {
+            height: 26px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            & img {
+              max-width: 146px;
+            }
+            & .lib-img {
+              position: relative;
+              top: -13px;
+            }
+          }
+          & .card_validity {
+            display: block;
+            margin-left: 15px;
+            color: #828282;
+            font-size: 0.875rem;
+            font-family: "lbet-mt";
+          }
+          & .mony {
+            display: none;
+            justify-content: space-around;
+            transition: all 0.2s;
+            &::placeholder {
+              color: #868895;
+            }
+            & .mony_amount {
+              width: 105px;
+              height: 37px;
+              font-size: 0.75rem;
+              background-color: #fff;
+              text-indent: 10px;
+              border-radius: 3px;
+            }
+            & .mony_pay {
+              width: 85px;
+              height: 37px;
+              padding: 0;
+              font-size: 0.75rem;
+              text-align: center;
+              line-height: 37px;
+              font-size: 0.8125rem;
+              color: #ffff;
+              border-radius: 3px;
+              background-color: rgb(67, 95, 160);
+            }
+          }
         }
-        & .card_validity {
-          color: #828282;
-          font-size: 0.875rem;
-        }
-        & .mony {
-          display: none;
+        & .card_bottom_path {
+          position: relative;
+          display: flex;
+          height: 46px;
           justify-content: space-around;
-          transition: all 0.5s;
-
-          & .mony_amount {
-            @include btn($bg: #ffff);
-            padding: 10px 14px;
-            width: 70px;
-          }
-          & .mony_pay {
-            @include btn($bg: rgb(67, 95, 160), $font-size: 0.75rem);
-            padding: 10px 14px;
-          }
+          color: #ffff;
+          align-items: center;
+          font-family: "lbet-mt";
+          transition: all 0.2s;
         }
-      }
-      & .card_bottom_path {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 46px;
-        position: relative;
-        z-index: 9;
-        transition: all 0.5s;
       }
       &:hover {
-        .card_bottom_path {
-          height: 20px;
+        & .card_top_path {
+          justify-content: flex-start;
+          & .card_logo {
+            margin-bottom: 20px;
+          }
+          & .card_validity {
+            display: none;
+          }
+          & .mony {
+            display: flex;
+          }
+        }
+        & .card_bottom_path {
+          height: 12px;
           > div {
             display: none;
           }
         }
-        .card_validity {
-          display: none;
-        }
-        .mony {
-          display: flex;
+      }
+    }
+  }
+}
+
+.card {
+  .delete_card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    p {
+      font-size: 0.814rem;
+      color: #828282;
+      text-transform: uppercase;
+    }
+    .delete_card_input {
+      position: relative;
+      input {
+        width: 133px;
+        height: 37px;
+        padding: 3px;
+        border: 1px solid #c6ccd1;
+        border-radius: 3px;
+        text-indent: 10px;
+        background-color: #fff;
+      }
+      .delete_card_input_sms {
+        position: absolute;
+        padding: 9px;
+        top: 50%;
+        right: -12px;
+        background-color: #dcdfe2;
+        border-radius: 3px;
+        transform: translate(-50%, -50%);
+        z-index: 11;
+        p {
+          font-size: 0.56rem;
+          text-transform: uppercase;
+          color: #7b8a9a;
         }
       }
+    }
+    .delete_card_confirm {
+      display: block;
+      padding: 11px 17px;
+      color: #ffff;
+      border-radius: 3px;
+      letter-spacing: 0.6px;
+      background-color: #3e42b5;
+      font-size: 0.8125rem;
     }
   }
 }

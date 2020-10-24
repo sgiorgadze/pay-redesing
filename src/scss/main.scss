@@ -122,9 +122,9 @@ body {
   @include clear;
   width: 100%;
   color: $font-color;
-  background-color: black;
-  font-family: "lbet-nus";
+  font-family: "BPGArial2010";
   font-size: 16px;
+  background-color: black;
 }
 
 .view-port {
@@ -146,37 +146,223 @@ a {
   text-decoration: none;
   color: inherit;
 }
+* {
+  box-sizing: border-box;
+}
 
 .pop_up_wrapper {
   display: flex;
   flex-direction: column;
+  min-height: 682px;
+  padding-bottom: 10px;
   background-color: $content-bg;
   border-radius: 10px;
-  overflow: hidden;
+  // overflow: hidden;
 
   .pop_up {
-    padding: 0 10px;
     height: 100%;
+    padding: 0 10px;
   }
 }
 
 input {
-  outline: none;
   background: none;
   border: none;
+  outline: none;
 }
 
 .pop_up_content_information_cards {
   & .card {
-    &.bg {
-      & .card_bottom_path {
-        background-color: #ff671b;
+    & .card_pay {
+      &.bg {
+        & .card_bottom_path {
+          background-color: #ff671b;
+        }
+      }
+      &.tb {
+        & .card_bottom_path {
+          background-color: #00aeef;
+        }
+      }
+      &.lib {
+        & .card_bottom_path {
+          background-color: #df3025;
+        }
       }
     }
-    &.tb {
-      & .card_bottom_path {
-        background-color: #00aeef;
+  }
+}
+
+.input-selector {
+  display: block;
+  @include input-before-after();
+}
+
+.information_bankCards_amount {
+  &.attention_sms {
+    @include input-before-after(
+      $before-left: -2%,
+      $before-top: -27px,
+      $after-right: 81px,
+      $after-top: -15px
+    );
+    &:before {
+      padding: 9px 20px;
+    }
+    input {
+      border: 1px solid #e20d00;
+      background-color: #fff !important;
+      color: #e20d00;
+    }
+  }
+}
+
+.sms_has_sent {
+  @include input-before-after(
+    $before-top: -28px,
+    $before-left: 50%,
+    $after-top: -17px,
+    $after-right: 47%,
+    $color: #3eb553
+  );
+  &::before {
+    content: attr(data-title);
+    padding: 9px 20px;
+  }
+}
+
+.sms_has_sent--red {
+  @include input-before-after(
+    $before-top: -28px,
+    $before-left: 40%,
+    $after-top: -17px,
+    $after-right: 47%,
+    $color: #e20d00
+  );
+  &::before {
+    content: attr(data-title);
+    padding: 9px 20px;
+  }
+  input {
+    border: 1px solid #e20d00 !important;
+    background-color: #fff !important;
+    color: #e20d00;
+  }
+}
+.go_back {
+  display: flex;
+
+  p {
+    margin: 0 16px;
+    color: #454a65;
+    font-size: 0.875rem;
+  }
+}
+.bankCards_btns_sms_button {
+  position: relative;
+  margin: 0 10px 0 20px;
+  input {
+    position: relative;
+    width: 188px;
+    height: 41px;
+    padding: 5px;
+    border: 1px solid #c6ccd1;
+    border-radius: 5px;
+    text-indent: 20px;
+  }
+  .bankCards_btns_input-sms {
+    position: absolute;
+    padding: 10px 9px;
+    top: 50%;
+    right: -13px;
+    transform: translate(-50%, -50%);
+    background-color: #dcdfe2;
+    border-radius: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    p {
+      color: #7b8a9a;
+      font-size: 0.68rem;
+      font-family: "lbet-mt";
+    }
+  }
+}
+.bankCards_btns__confirm {
+  width: 102px;
+  height: 41px;
+  padding: 0px;
+  color: #ffff;
+  font-size: 0.9375rem;
+  line-height: 41px;
+  text-align: center;
+  background-color: #3e42b5;
+  border-radius: 3px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.pop_up_header_right_path-turnOff {
+  display: none;
+  flex: 2 0 0;
+  align-items: center;
+  justify-content: space-around;
+  p {
+    font-size: 0.81rem;
+    text-transform: uppercase;
+  }
+  & .confirm_input {
+    position: relative;
+    width: 132px;
+
+    input {
+      position: relative;
+      width: 100%;
+      height: 41px;
+      background-color: #fff;
+      border-radius: 50px;
+      text-indent: 20px;
+    }
+    & .confirm_input_sms {
+      position: absolute;
+      display: block;
+      padding: 10px;
+      right: -15px;
+      top: 50%;
+      background-color: #dcdfe2;
+      border-radius: 50px;
+      text-transform: uppercase;
+      transform: translate(-50%, -50%);
+      p {
+        color: #7b8a9a;
+        font-size: 11px;
       }
+    }
+  }
+  & .confirm_btn {
+    height: 41px;
+    width: 104px;
+    color: #fff;
+    font-size: 15px;
+    background-color: #3e42b5;
+    border-radius: 50px;
+    line-height: 41px;
+    text-align: center;
+  }
+}
+.card_join_accept_btns {
+  display: flex;
+  .card_join_accept_button {
+    @include btn($bg: #3eb553);
+    padding: 11.5px 22.5px;
+    cursor: pointer;
+    &:first-child {
+      margin-right: 10px;
+      background-color: #ccc192;
+    }
+    &.grey {
+      background-color: #9ba7b4;
     }
   }
 }

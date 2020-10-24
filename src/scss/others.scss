@@ -1,0 +1,105 @@
+@import "partials/mixins";
+@import "partials/params";
+
+.pop_up_content_information {
+  &.others {
+    & .others_pay_provaiders {
+      padding-top: 10px;
+      & .others_bank_section {
+        position: relative;
+        display: flex;
+        width: 100%;
+        margin-bottom: 10px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #dedede;
+        border-radius: 5px;
+        &:last-child {
+          margin-bottom: 0px;
+        }
+        & .others_bank_section-item {
+          width: 100%;
+          height: 69px;
+          padding: 10px 14px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          & .others_bank_section-item_img {
+            width: 50%;
+          }
+          & .others_bank_section-item_pin_block {
+            width: 20%;
+            & .others_bank_section-item_pin {
+              display: flex;
+              align-items: center;
+            }
+          }
+          & .others_bank_section-item_pin {
+            p {
+              margin-right: 15px;
+              font-size: 0.8125rem;
+              color: #868895;
+              text-transform: uppercase;
+            }
+            .pin_code {
+              color: #41476a;
+              font-size: 0.9375rem;
+            }
+          }
+          & .insctuction_text {
+            width: 12%;
+            p {
+              font-size: 0.75rem;
+              color: #64687e;
+            }
+          }
+          > div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+          }
+          &.liderbet {
+            & .liderbet_atms {
+              width: 26%;
+              a {
+                font-size: 0.8125rem;
+                color: #4053a1;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+      & .bank_section_others_instruction {
+        max-width: 100%;
+        padding: 17.5px 15px 31px 21px;
+        border-top: 1px solid #dedede;
+        & .others_instruction_text {
+          width: 100%;
+          max-height: 117px;
+          padding-right: 40px;
+          overflow-y: auto;
+          color: #64687e;
+          font-size: 0.75rem;
+          p {
+            margin-bottom: 20px;
+          }
+          &::-webkit-scrollbar {
+            width: 3px;
+          }
+
+          &::-webkit-scrollbar-track {
+            background: transparent;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background: #c8d1db;
+          }
+        }
+      }
+    }
+  }
+}

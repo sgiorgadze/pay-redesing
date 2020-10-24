@@ -1,0 +1,312 @@
+@import "partials/mixins";
+@import "partials/params";
+
+.pop_up_content_information_bankCards {
+  .bank_section {
+    @include flex-center($dir: row);
+    width: 100%;
+    height: 69px;
+    margin-bottom: 10px;
+    padding: 14px 10px;
+    position: relative;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    .bank_section_img {
+      width: 26%;
+      display: flex;
+      align-items: center;
+
+      p {
+        margin-left: 20px;
+        font-size: 0.75rem;
+        color: #6e6f71;
+      }
+    }
+    .information_icon {
+      position: relative;
+      cursor: pointer;
+
+      &:hover {
+        @include input-before-after(
+          $color: #5c74a5,
+          $width: 126px,
+          $white-space: normal,
+          $after-right: 5px,
+          $after-top: -13px,
+          $before-top: -35px,
+          $before-left: 57%
+        );
+        &:before {
+          padding: 9px 3px;
+          line-height: 1.5;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+  .bankCards_btns {
+    width: 63%;
+    position: relative;
+    @include flex-center($dir: row);
+    justify-content: flex-end;
+
+    .information_bankCards_choose_card {
+      @include flex-center($dir: row);
+      width: 215px;
+      height: 41px;
+      padding: 0 10px;
+      border-radius: 3px;
+      background-color: #e6e6e6;
+      font-size: 0.81rem;
+
+      &::placeholder {
+        color: #868895;
+      }
+      .choose_card--close-icon {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+      p {
+        color: #868895;
+      }
+    }
+    .information_bankCards_personal_card {
+      width: 43.5%;
+      height: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 0.88rem;
+      p {
+        font-size: 0.68rem;
+        color: #838891;
+      }
+      .personal_card_digits {
+        display: flex;
+        color: #3a3d51;
+      }
+    }
+    .information_bankCards_amount {
+      position: relative;
+      height: 41px;
+
+      input {
+        position: relative;
+        width: 123px;
+        height: 100%;
+        margin: 0 10px;
+        text-indent: 10px;
+        // padding: 12px 10px;
+        background-color: #e6e6e6;
+        border-radius: 3px;
+        &::placeholder {
+          color: #868895;
+          font-size: 0.81rem;
+        }
+        &:focus {
+          background-color: #fff;
+          border: 1px solid #c6ccd1;
+        }
+      }
+    }
+    .information_bankCards_replenish {
+      width: 102px;
+      height: 41px;
+      color: #ffff;
+      text-align: center;
+      line-height: 41px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      background-color: #3eb553;
+      border-radius: 3px;
+      font-size: 0.9375rem;
+      cursor: pointer;
+      &.blue-active {
+        background-color: $blue-active-class-bg;
+        width: 88px;
+      }
+    }
+    .bankCards_btns__title {
+      font-size: 0.81rem;
+      color: #868895;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.information_bankCards_choose_card--dropdown {
+  display: none;
+  flex-direction: column;
+  width: 215px;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: auto;
+  z-index: 10;
+  box-shadow: 1px 4px 18px #888888;
+  border-radius: 3px;
+  background-color: #ffff;
+  .dropdown__title {
+    @include flex-center($dir: row);
+    height: 41px;
+    padding: 0 10px;
+    p {
+      color: #868895;
+      font-size: 0.81rem;
+    }
+  }
+  .dropdown__list {
+    display: flex;
+    flex-direction: column;
+    @include clear-list();
+
+    .dropdown__item {
+      height: 41px;
+      padding: 0 10px;
+      border-top: 1px solid #dedede;
+      color: #474958;
+      .dropdown__link {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 0.81rem;
+        line-height: 40px;
+        .dropdown__link-circle {
+          display: flex;
+          width: 14px;
+          height: 14px;
+          align-items: center;
+          color: #ffff;
+          justify-content: center;
+          font-weight: bold;
+          border-radius: 50%;
+          &.plus {
+            background-color: #3eb553;
+          }
+          &.minus {
+            background-color: #9dabc1;
+          }
+        }
+      }
+    }
+  }
+  .close_dropdown {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+.bank_section_idCard {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .bank_section_idCard-item {
+    width: 100%;
+    height: 69px;
+    padding: 10px 14px;
+    @include flex-center($dir: row);
+    > div {
+      @include flex-center($dir: row);
+    }
+    a {
+      font-size: 0.8125rem;
+      color: #4053a1;
+      text-decoration: underline;
+    }
+    .bank_section_idCard_img {
+      width: 26%;
+    }
+    .cashier_address {
+      width: 14%;
+    }
+    .video_instruction {
+      width: 22%;
+    }
+    .insctuction_text {
+      width: 12%;
+      p {
+        font-size: 0.75rem;
+        color: #64687e;
+      }
+    }
+  }
+  .bank_section_idCard-instruction {
+    padding: 10px 14px 21px 14px;
+    border-top: 1px solid #dedede;
+    .idCard-instruction_title {
+      font-size: 0.81rem;
+      color: #313237;
+    }
+    .idCard-instruction_text {
+      display: flex;
+      align-items: center;
+      margin-top: 19px;
+      font-size: 0.75rem;
+      .idCard-instruction {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+        border-radius: 50%;
+        background-color: #f10042;
+        line-height: 20px;
+        text-align: center;
+        color: #ffff;
+      }
+      p {
+        color: #64687e;
+      }
+    }
+    .idCard-instruction_attention {
+      margin-top: 20px;
+      font-size: 0.75rem;
+      color: #313237;
+    }
+  }
+}
+.bank_section_idCard {
+  .bank_section_atms_instruction {
+    max-width: 100%;
+    padding: 17.5px 15px 31px 21px;
+    border-top: 1px solid #dedede;
+  }
+  .atms_instruction_text {
+    width: 100%;
+    max-height: 117px;
+    padding-right: 40px;
+    color: #64687e;
+    font-size: 0.75rem;
+    overflow-y: auto;
+    p {
+      margin-bottom: 20px;
+    }
+    span {
+      width: 100%;
+    }
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #c8d1db;
+    }
+  }
+}

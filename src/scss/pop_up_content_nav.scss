@@ -7,18 +7,27 @@
     & .nav-list {
       @include clear-list();
       & .nav-item {
-        border-top: 1px solid #70707030;
-
-        &:first-child {
+        font-size: 0.87rem;
+        border-bottom: 1px solid #70707030;
+        border-top-left-radius: 5px;
+        &:last-child {
           border-top: none;
+        }
+        &.active-nav-item-bg {
+          background-color: #fff;
+          border-bottom-left-radius: 5px;
+          &.nav-item {
+            border: none;
+          }
         }
         & .nav-link {
           display: flex;
-          align-items: center;
           height: 100%;
           padding: 1.25rem 0.625rem;
+          align-items: center;
           color: black;
           transition: all 0.5s;
+          text-transform: uppercase;
           img {
             margin-right: 14px;
           }

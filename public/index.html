@@ -1,39 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Scss</title>
-    <link rel="stylesheet" href="bundle.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-  </head>
 
-  <body>
-    <div class="pop_up_wrapper view-port">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Scss</title>
+  <link rel="stylesheet" href="bundle.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="pop_up_wrapper view-port">
     <div class="pop_up">
       <div class="pop_up_header">
-        <div class="pop_up_header__buttons"> 
-          <div class="replenish_btn">
-            <img src="../public/img/Group 852.png" alt="">
+        <div class="pop_up_header__buttons">
+          <a href="./index.html" class="replenish_btn">
+            <img src="./img/Group 852.png" alt="">
             <p>შევსება</p>
-          </div>
-          <div class="cash_withdrawal_btn">
-              <img src="../public/img/Group 852.png" alt="">
-              <p>თანხის გატანა</p>
-          </div>
+          </a>
+          <a href="./tanxisGatana.html" class="cash_withdrawal_btn">
+            <img src="./img/Group 851.png" alt="">
+            <p>თანხის გატანა</p>
+          </a>
         </div>
-        <div class="pop_up_header_right_path">
-     <div class="pop_up_header_right_path-title"><p>sms  დადასტურება</p></div>
-     <div class="toggle_btn">
-       <div class="toggle_btn_green"></div>
-     </div>
-     <div class="pop_up_header_right_path-close"><img src="./img/Component 33 – 2.png" alt=""></div>
+        <div class="pop_up_header_right_path-turnOn ">
+          <img src="./img/Group 1008.png" alt="">
+          <div class="pop_up_header_right_path-title">
+            <p>sms დადასტურება:</p>
+          </div>
+          <div class="toggle_btn">
+            <div class="toggle_btn_green"></div>
+          </div>
+          <div class="pop_up_header_right_path-close sms_confirm"><img src="./img/Component 33 – 2.png" alt=""></div>
+        </div>
+        <div class="pop_up_header_right_path-turnOff">
+          <p>sms დადასტურება:</p>
+          <div class="confirm_input">
+            <input type="text">
+            <div class="confirm_input_sms">
+              <p>sms</p>
+            </div>
+          </div>
+          <div class="confirm_btn">დასტური</div>
+          <img src="./img/Component 33 – 2.png" alt="">
         </div>
 
       </div>
@@ -41,47 +52,77 @@
       <div class="pop_up_content">
         <div class="pop_up_content_nav">
           <ul class="nav-list">
+              <li class="nav-item "><a class="nav-link" href="./LiderCard/order-new-card.html">
+                  <img src="./img/lidercard/Group 1015.png" alt="">
+                  <p>ლიდერქარდი</p>
+                </a></li>
+            <li class="nav-item active-nav-item-bg"><a class="nav-link" href="#">
+                <img src="./img/Group 471.png" alt="">
+                <p>ბარათები</p>
+              </a></li>
+            <li class="nav-item"><a class="nav-link" href="./electronic-wallets.html">
+                <img src="./img/Group 474.png" alt="">
+                <p>ელ.საფულეები</p>
+              </a></li>
             <li class="nav-item"><a class="nav-link" href="#">
-              <img src="./img/Group 471.png" alt="">
-              <p>ბარათები</p>
-            </a></li>
-              <li class="nav-item"><a class="nav-link" href="#">
-                  <img src="./img/Group 474.png" alt="">
-                  <p>ელ.საფულეები</p>
-                </a></li>
-              <li class="nav-item"><a class="nav-link" href="#">
-                  <img src="./img/Group 475.png" alt="">
-                  <p>სხვა</p>
-                </a></li>
+                <img src="./img/Group 475.png" alt="">
+                <p>სხვა</p>
+              </a></li>
           </ul>
         </div>
         <div class="pop_up_content_information">
           <h1>ჩემი ბარათები</h1>
           <div class="pop_up_content_information_cards">
-            <div class="card bg">
-              <div class="card_top_path">
-                <div class="card_logo">
-                    <img src="./img/Component 48 – 4.png" alt="">
-                    <img src="./img/Component 14.png" alt="">
-                </div>        
-                <div class="mony">
-                  <input class="mony_amount" type="text" placeholder="თანხა"/>                                         
-                  <div class="mony_pay">გატანა</div>
-                </div>
-                <div class="card_validity">02/23</div>
-              </div>
-                            <div class="card_bottom_path">
-                <div>****</div>
-                <div>****</div>
-                <div>****</div>
-                <div class="card_last_number">4596</div>
-              </div>
-            </div>
-              <div class="card tb">
+            <div class="card">
+              <div class="card_pay bg">
                 <div class="card_top_path">
                   <div class="card_logo">
-                    <img src="./img/d9fd4d6e-bbab-4c36-acab-240aeb0162a0.png" alt="">
-                    <img src="./img/Component 15.png" alt="">
+                    <img src="./img/Component 48 – 4.png" alt="" />
+                    <img class="close" src="./img/Component 14.png" alt="" />
+                  </div>
+                  <div class="mony">
+                    <input class="mony_amount" type="text" placeholder="თანხა" />
+                    <a href="./transaction-done.html" class="mony_pay">გატანა</a>                  
+                  </div>
+                  <div class="card_validity">02/23</div>
+                </div>
+                <div class="card_bottom_path">
+                  <div>****</div>
+                  <div>****</div>
+                  <div>****</div>
+                  <div class="card_last_digit">4596</div>
+                </div>
+              </div>
+              <div class="delete_card" >
+                <p>მიუთითეთ sms კოდი</p>
+                <div class="delete_card_input " title="sms კოდი არასწორია" >
+                  <input type="text" id="card-delete-value">
+                  <div class="delete_card_input_sms">
+                    <p>sms</p>
+                  </div>
+                </div>
+                <div class="delete_card_confirm">დასტური</div>
+              </div>
+              <div class="card_delete_successful">
+               <div class="card_delete_successful_img">
+                 <img src="./img/Component 19 – 1.png" alt="">
+               </div>
+               <p>ბარათი წარმატებით </br>წაიშალა</p>
+              </div>
+              <div class="card_delete_unsuccessful">
+                <div class="card_delete_unsuccessful_img">
+                  <img src="./img/Component 24 – 1.png" alt="">
+                </div>
+                <p>ბარათის წაშლა </br>ვერ მოხერხდა</p>
+              </div>
+
+            </div>
+            <div class="card">
+              <div class="card_pay tb">
+                <div class="card_top_path">
+                  <div class="card_logo">
+                    <img src="./img/d9fd4d6e-bbab-4c36-acab-240aeb0162a0.png" alt="" />
+                    <img class="close" src="./img/Component 14.png" alt="" />
                   </div>
                   <div class="mony">
                     <input class="mony_amount" type="text" placeholder="თანხა" />
@@ -93,18 +134,285 @@
                   <div>****</div>
                   <div>****</div>
                   <div>****</div>
-                  <div class="card_last_number">4596</div>
+                  <div class="card_last_digit">4596</div>
                 </div>
               </div>
-             
+
+            </div>
+            <div class="card">
+              <div class="card_pay lib">
+                <div class="card_top_path">
+                  <div class="card_logo">
+                    <img class="lib-img" src="./img/logo-fb-ka.png" alt="" />
+                    <img class="close" src="./img/Component 14.png" alt="" />
+                  </div>
+                  <div class="mony">
+                    <input class="mony_amount" type="text" placeholder="თანხა" />
+                    <div class="mony_pay">გატანა</div>
+                  </div>
+                  <div class="card_validity">02/23</div>
+                </div>
+                <div class="card_bottom_path">
+                  <div>****</div>
+                  <div>****</div>
+                  <div>****</div>
+                  <div class="card_last_digit">4596</div>
+                </div>
+              </div>
+
+            </div> 
+                             
+
           </div>
-          <div class="pop_up_content_information_payInfoOfBanks"></div>
+          <div class="pop_up_content_information_bankCards">
+            <div class="bank_section">
+              <div class="bank_section_img"><img src="./img/Component 48 – 4.png" alt=""></div>
+              <div class="information_icon" title=" მინ.თანხა 1 ლარი საკომისიო 0%">
+                  <img src="./img/Group -1.png" alt="img"  >
+                 </div>            
+              <div class="bankCards_btns">
+
+                <div class="information_bankCards_choose_card">
+                  <p>აირჩიე ბარათი</p>
+                  <div class="choose_card--close-icon">
+                    <img src="./img/Group 983.png"  alt="">
+                  </div>
+                </div>
+                <div class="information_bankCards_choose_card--dropdown">
+                  <div class="dropdown__title">
+                    <p>აირჩიეთ ბარათი</p>
+                   <div class="close_dropdown">
+                      <img src="./img/Path 987.png" alt="">
+                   </div>
+
+                   
+                  </div>
+                  <ul class="dropdown__list">
+                    <li class="dropdown__item">
+                      <a href="" class="dropdown__link">
+                        <div class="dropdown__link-circle plus">
+                          <img src="./img/icons_20_10/Component 17 – 2@2x.png" alt="">
+                        </div>
+                        <p>ახალი ბარათი შენახვით</p>
+                      </a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="" class="dropdown__link">
+                        <div class="dropdown__link-circle minus">
+                          <img src="./img/icons_20_10/Component 18 – 1@2x.png" alt="">
+                        </div>
+                        <p>ბარათი შენახვის გარეშე</p>
+                      </a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="" class="dropdown__link">
+                        <img src="./img/Path 1136.png" alt="">
+                        <div>****</div>
+                        <div>****</div>
+                        <div>****</div>
+                        <div>6454</div>
+                      </a>
+                    </li>                    
+                  </ul>
+                </div>
+
+
+                <div class="information_bankCards_amount " title="თანხა არასწორად არის მითითებული">
+                  <input type="text" placeholder="თანხა" class="attention_sms_input" >          
+                </div>
+                <div class="information_bankCards_replenish">შევსება</div>
+              </div>
+
+            </div>
+            <div class="bank_section">
+              <div class="bank_section_img"><img src="./img/icons_20_10/tbc-icon.png" alt=""></div>
+
+              <div class="information_icon" title=" მინ.თანხა 1 ლარი საკომისიო 0%">
+                <img src="./img/Group -1.png" alt="img">
+              </div>
+              <div class="bankCards_btns">
+
+                <div class="information_bankCards_choose_card">
+                  <p>აირჩიე ბარათი</p>
+                  <div class="choose_card--close-icon">
+                    <img src="./img/Group 983.png" alt="">
+                  </div>
+                </div>
+                <div class="information_bankCards_choose_card--dropdown">
+                  <div class="dropdown__title">
+                    <p>აირჩიე ბარათი</p>
+                    <img src="./img/Path 987.png" alt="">
+                  </div>
+                  <ul class="dropdown__list">
+                    <li class="dropdown__item">
+                      <a href="" class="dropdown__link">
+                        <div class="dropdown__link-circle plus">+</div>
+                        <p>ახალი ბარათი შენახვით</p>
+                      </a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="" class="dropdown__link">
+                        <div class="dropdown__link-circle minus">-</div>
+                        <p>ბარათი შენახვის გარეშე</p>
+                      </a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="" class="dropdown__link">
+                        <img src="./img/Path 1136.png" alt="">
+                        <div>****</div>
+                        <div>****</div>
+                        <div>****</div>
+                        <div>6454</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+
+                <div class="information_bankCards_amount">
+                <input type="text" placeholder="თანხა">
+                </div>
+                <div class="information_bankCards_replenish">შევსება</div>
+              </div>
+
+            </div>
+            <div class="bank_section">
+              <div class="bank_section_img"><img src="./img/Component 17 – 2.png" alt=""></div>
+
+              <div class="information_icon" title=" მინ.თანხა 1 ლარი საკომისიო 0%">
+                <img src="./img/Group -1.png" alt="img">
+              </div>
+              <div class="bankCards_btns">
+
+                <div class="information_bankCards_choose_card">
+                  <p>აირჩიე ბარათი</p>
+                  <div class="choose_card--close-icon">
+                    <img src="./img/Group 983.png" alt="">
+                  </div>
+                </div>
+                <div class="information_bankCards_choose_card--dropdown">
+                  <div class="dropdown__title">
+                    <p>აირჩიე ბარათი</p>
+                    <img src="./img/Path 987.png" alt="">
+                  </div>
+                  <ul class="dropdown__list">
+                    <li class="dropdown__item">
+                      <a href="" class="dropdown__link">
+                        <div class="dropdown__link-circle plus">+</div>
+                        <p>ახალი ბარათი შენახვით</p>
+                      </a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="" class="dropdown__link">
+                        <div class="dropdown__link-circle minus">-</div>
+                        <p>ბარათი შენახვის გარეშე</p>
+                      </a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="" class="dropdown__link">
+                        <img src="./img/Path 1136.png" alt="">
+                        <div>****</div>
+                        <div>****</div>
+                        <div>****</div>
+                        <div>6454</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+
+                <div class="information_bankCards_amount">
+                <input type="text" placeholder="თანხა">
+                </div>
+                <div class="information_bankCards_replenish">შევსება</div>
+              </div>
+
+            </div>
+            <div class="bank_section">
+              <div class="bank_section_img"><img src="./img/Group 841.png" alt=""></div>
+
+              <div class="information_icon" title=" მინ.თანხა 1 ლარი საკომისიო 0%">
+                <img src="./img/Group -1.png" alt="img">
+              </div>
+              <div class="bankCards_btns">
+                <div class="bankCards_btns__title">შეიყვანეთ sms კოდი</div>
+                <div class="bankCards_btns_sms_button" data-title="">
+                  <input type="text" class="confirm_button_input">
+                  <div class="bankCards_btns_input-sms">
+                    <p>sms</p>
+                  </div>
+                </div>
+                <div class="bankCards_btns__confirm">დასტური</div>
+
+              </div>
+
+            </div>
+            <div class="bank_section">
+              <div class="bank_section_img">
+                <div><img src="./img/424.png" alt=""></div>
+
+                <p>ნებისმიერი ბარათით</p>
+              </div>
+
+              <div class="information_icon" title=" მინ.თანხა 1 ლარი საკომისიო 0%">
+                <img src="./img/Group -1.png" alt="img">
+              </div>
+              <div class="bankCards_btns">
+
+                <div class="information_bankCards_choose_card">
+                  <p>აირჩიე ბარათი</p>
+                  <div class="choose_card--close-icon">
+                    <img src="./img/Group 983.png" alt="">
+                  </div>
+                </div>
+                <div class="information_bankCards_choose_card--dropdown">
+                  <div class="dropdown__title">
+                    <p>აირჩიე ბარათი</p>
+                    <img src="./img/Path 987.png" alt="">
+                  </div>
+                  <ul class="dropdown__list">
+                    <li class="dropdown__item">
+                      <a href="" class="dropdown__link">
+                        <div class="dropdown__link-circle plus">+</div>
+                        <p>ახალი ბარათი შენახვით</p>
+                      </a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="" class="dropdown__link">
+                        <div class="dropdown__link-circle minus">-</div>
+                        <p>ბარათი შენახვის გარეშე</p>
+                      </a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="" class="dropdown__link">
+                        <img src="./img/Path 1136.png" alt="">
+                        <div>****</div>
+                        <div>****</div>
+                        <div>****</div>
+                        <div>6454</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+
+                <div class="information_bankCards_amount">
+                <input type="text" placeholder="თანხა">
+                </div>
+                <div class="information_bankCards_replenish">შევსება</div>
+              </div>
+
+            </div>
+
+          </div>
         </div>
       </div>
       <!-- /.pop_up_content -->
 
 
     </div>
-    </div>
-  </body>
+  </div>
+  <script src="./js/main.js"></script>
+</body>
+
 </html>

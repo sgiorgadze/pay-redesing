@@ -28,7 +28,7 @@ var config = {
         cssName: 'bundle.min.css',
         path: './public'
     },
-    isDevelop: true //false gadaiyvan frodaqshenistvis
+    isDevelop: true //false for frod
 };
 
 gulp.task('scss', function () {
