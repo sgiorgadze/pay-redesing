@@ -64,11 +64,7 @@ cardDeleteValue.style.border="1px solid #E20D00";
     deleteCard.style.display="none";
     deleteUnsuccess.style.display="flex"
   }
-
 }
-
-
-
 let replenishBUtton = document.querySelector(".information_bankCards_replenish");
 replenishBUtton.addEventListener("click", addAttentionSms);
 
@@ -76,7 +72,7 @@ function addAttentionSms(){
 
   let inncorrect = document.querySelector(".information_bankCards_amount");
   let inputValue= document.querySelector(".attention_sms_input");
-   if(inputValue.value==1){     
+   if(inputValue.value!==0){     
     inncorrect.classList.add("attention_sms");
   }
 }
@@ -101,10 +97,13 @@ function smsSend (){
  }
 
  function incorretCode() {
-   if(confirmSmsInput.value==1) {
+   if(confirmSmsInput.value!=0) {
 
       smsSent.setAttribute("data-title", "sms კოდი არასწორია");
       smsSent.classList.add("sms_has_sent--red");
       confirmbutton.style.backgroundColor="#9A9DA1"
    }
  }
+
+
+ 

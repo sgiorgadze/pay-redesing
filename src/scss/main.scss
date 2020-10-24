@@ -366,3 +366,9 @@ input {
     }
   }
 }
+
+.bank_section_atms_instruction {
+  &.active {
+    display: block !important;
+  }
+}

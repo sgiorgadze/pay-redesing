@@ -220,6 +220,7 @@
     height: 69px;
     padding: 10px 14px;
     @include flex-center($dir: row);
+
     > div {
       @include flex-center($dir: row);
     }
@@ -239,6 +240,7 @@
     }
     .insctuction_text {
       width: 12%;
+      cursor: pointer;
       p {
         font-size: 0.75rem;
         color: #64687e;
@@ -257,6 +259,7 @@
       align-items: center;
       margin-top: 19px;
       font-size: 0.75rem;
+
       .idCard-instruction {
         width: 20px;
         height: 20px;
@@ -280,6 +283,7 @@
 }
 .bank_section_idCard {
   .bank_section_atms_instruction {
+    display: none;
     max-width: 100%;
     padding: 17.5px 15px 31px 21px;
     border-top: 1px solid #dedede;
@@ -291,6 +295,7 @@
     color: #64687e;
     font-size: 0.75rem;
     overflow-y: auto;
+
     p {
       margin-bottom: 20px;
     }
