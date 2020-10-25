@@ -39,6 +39,29 @@
     align-items: center;
     padding-right: 0.625rem;
     text-transform: uppercase;
+    .pop_up_header_right_path-turnOn-img {
+      position: relative;
+      cursor: pointer;
+      &:hover {
+        @include input-before-after(
+          $color: #5c74a5,
+          $width: 126px,
+          $white-space: normal,
+          $after-right: 5px,
+          $after-top: 24px,
+          $before-top: 61px,
+          $before-left: 57%
+        );
+        &:before {
+          padding: 9px 3px;
+          line-height: 1.5;
+          border-radius: 20px;
+        }
+        &::after {
+          transform: rotate(-46deg);
+        }
+      }
+    }
     & .pop_up_header_right_path-close {
       &.sms_confirm {
         margin-right: 0;

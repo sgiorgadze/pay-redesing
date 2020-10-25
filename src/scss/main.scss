@@ -339,6 +339,25 @@ input {
         font-size: 11px;
       }
     }
+    &.turnOff_sms-incorrect {
+      @include input-before-after(
+        $before-left: 52%,
+        $before-top: 65px,
+        $after-right: 63px,
+        $after-top: 45px
+      );
+      &:before {
+        padding: 9px 20px;
+      }
+
+      &::after {
+        transform: rotate(-46deg);
+        box-shadow: none;
+      }
+      input {
+        color: #e20d00;
+      }
+    }
   }
   & .confirm_btn {
     height: 41px;
@@ -349,6 +368,7 @@ input {
     border-radius: 50px;
     line-height: 41px;
     text-align: center;
+    cursor: pointer;
   }
 }
 .card_join_accept_btns {
