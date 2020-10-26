@@ -305,7 +305,7 @@ input {
 
 .pop_up_header_right_path-turnOff {
   display: none;
-  flex: 2 0 0;
+  flex-basis: 60%;
   align-items: center;
   justify-content: space-around;
   p {
@@ -323,6 +323,9 @@ input {
       background-color: #fff;
       border-radius: 50px;
       text-indent: 20px;
+      &.pop_up_header-outline {
+        border: 1px solid #c6ccd1;
+      }
     }
     & .confirm_input_sms {
       position: absolute;
@@ -340,19 +343,9 @@ input {
       }
     }
     &.turnOff_sms-incorrect {
-      @include input-before-after(
-        $before-left: 52%,
-        $before-top: 65px,
-        $after-right: 63px,
-        $after-top: 45px
-      );
+      @include input-before-after($before-top: -26px, $after-top: -15px);
       &:before {
         padding: 9px 20px;
-      }
-
-      &::after {
-        transform: rotate(-46deg);
-        box-shadow: none;
       }
       input {
         color: #e20d00;
