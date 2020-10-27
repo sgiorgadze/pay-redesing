@@ -8,6 +8,16 @@ let turnOff = document.querySelector(".pop_up_header_right_path-turnOff");
 turnOn.style.display="none";
 turnOff.style.display="flex";
 };
+let turnOffButton = document.querySelector(".confirm_btn");
+turnOffButton.addEventListener("click", attentionSms);
+
+function attentionSms(){
+  let turnOffInput= document.querySelector(".turnOff_input");
+  if(turnOffButton.value!==0){
+    document.querySelector(".confirm_input").classList.add("turnOff_sms-incorrect");
+  }
+
+}
 
 let chooseCardIcon = document.querySelector(".choose_card--close-icon");
 let closeDropdownButton = document.querySelector(".close_dropdown");
@@ -105,14 +115,5 @@ function smsSend (){
    }
  }
 
-let turnOffButton = document.querySelector(".confirm_btn");
-turnOffButton.addEventListener("click", attentionSms);
 
-function attentionSms(){
-  let turnOffInput= document.querySelector(".turnOff_input");
-  if(turnOffButton.value!==0){
-    document.querySelector(".confirm_input").classList.add("turnOff_sms-incorrect");
-  }
-
-}
  
