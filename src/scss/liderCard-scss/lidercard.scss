@@ -9,6 +9,7 @@
 }
 .pop_up_content_information {
   .order_new_liderCard {
+    min-height: calc(682px - 61px);
     position: relative;
     display: flex;
     width: 100%;

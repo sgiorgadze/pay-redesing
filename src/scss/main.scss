@@ -153,13 +153,14 @@ a {
 .pop_up_wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 682px;
+  // min-height: 682px;
   padding-bottom: 10px;
   background-color: $content-bg;
   border-radius: 10px;
   // overflow: hidden;
 
   .pop_up {
+    position: relative;
     height: 100%;
     padding: 0 10px;
   }
@@ -383,5 +384,28 @@ input {
 .bank_section_atms_instruction {
   &.active {
     display: block !important;
+  }
+}
+
+.information_icon--red {
+  svg {
+    path {
+      fill: #e20d00;
+    }
+  }
+
+  @include input-before-after(
+    $color: #5c74a5,
+    $width: 126px,
+    $white-space: normal,
+    $after-right: 5px,
+    $after-top: -13px,
+    $before-top: -35px,
+    $before-left: 57%
+  );
+  &:before {
+    padding: 9px 3px;
+    line-height: 1.5;
+    border-radius: 20px;
   }
 }

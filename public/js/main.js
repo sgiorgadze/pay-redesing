@@ -84,6 +84,7 @@ function addAttentionSms(){
   let inputValue= document.querySelector(".attention_sms_input");
    if(inputValue.value!==0){     
     inncorrect.classList.add("attention_sms");
+    document.querySelector(".information_icon").classList.add("information_icon--red")
   }
 }
 
