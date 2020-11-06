@@ -65,7 +65,7 @@
         .order_new_liderCard_accepted_text {
           color: #54596a;
           font-size: 1rem;
-          font-family: LBet STD MT;
+          font-family: "lbet-mt";
         }
         .order_new_liderCard_accepted_sms {
           margin: 11px 0 30px 0;
@@ -74,6 +74,7 @@
         }
         .order_new_card_accepted_done_btn {
           @include btn($bg: #9ba7b4, $font-size: 1rem);
+          font-family: "lbet-mt";
           padding: 11.5px 28px;
 
           color: #ffff;
@@ -86,7 +87,7 @@
     .order_new_liderCard_title {
       color: #54596a;
       font-size: 1rem;
-      font-family: "BPGArial2010";
+      font-family: "lbet-mt";
     }
     .order_new_liderCard_button {
       display: flex;
@@ -104,6 +105,7 @@
     }
     .order_new_liderCard_link_info {
       color: #435fa0;
+      margin-top: 1rem;
       font-size: 0.8125rem;
       text-decoration: underline;
     }
@@ -167,6 +169,7 @@
         font-size: 1rem;
         line-height: 44px;
         text-align: center;
+        font-family: "lbet-mt";
         background-color: #9ba7b4;
         border-radius: 5px;
       }
@@ -246,6 +249,7 @@
         @include btn($bg: #3e42b5, $font-size: 0.93rem);
         width: 102px;
         padding: 10.5px 13.5px;
+        font-family: "lbet-mt";
         border-radius: 3px;
         color: #ffff;
         text-align: center;
@@ -368,6 +372,7 @@
               font-size: 0.75rem;
               line-height: 37px;
               color: #ffff;
+              font-family: "lbet-mt";
               background-color: #435fa0;
               border-radius: 5px;
             }
@@ -514,6 +519,7 @@
         width: 102px;
         background-color: #3eb553;
         border-radius: 3px;
+        font-family: "lbet-mt";
         font-size: 0.93rem;
         line-height: 41px;
         color: #ffff;
@@ -526,6 +532,7 @@
         font-size: 0.93rem;
         line-height: 41px;
         color: #ffff;
+        font-family: "lbet-mt";
         text-align: center;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -650,6 +657,7 @@
       .cancel_sync_title {
         margin: 12px 0;
         font-size: 1rem;
+        font-family: "lbet-mt";
         color: #e20d00;
       }
       .cancel_sync_text {
@@ -661,13 +669,15 @@
         margin-top: 20px;
         font-size: 1rem;
         color: #54596a;
+        font-family: "lbet-mt";
         text-align: center;
       }
       .sync_text {
-        margin: 10px 0 36px;
+        margin: 13px 0 36px;
         color: #4e5c67;
         font-size: 0.75rem;
         text-align: center;
+
         &.confirmation {
           margin-bottom: 0;
         }

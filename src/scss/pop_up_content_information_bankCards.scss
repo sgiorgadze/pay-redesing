@@ -119,6 +119,7 @@
       height: 41px;
       color: #ffff;
       text-align: center;
+      font-family: "lbet-mt";
       line-height: 41px;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -132,7 +133,7 @@
       }
     }
     .bankCards_btns__title {
-      font-size: 0.81rem;
+      font-size: 0.8125rem;
       color: #868895;
       text-transform: uppercase;
     }
@@ -239,7 +240,7 @@
       width: 22%;
     }
     .insctuction_text {
-      width: 12%;
+      width: 13%;
       cursor: pointer;
       p {
         font-size: 0.75rem;

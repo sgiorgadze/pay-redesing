@@ -10,6 +10,7 @@
   & .pop_up_header__buttons {
     display: flex;
     flex: 2 0 0;
+    font-family: "lbet-mt";
     color: #ffffff;
     & .replenish_btn {
       @include btn();
