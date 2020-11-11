@@ -11,6 +11,18 @@ body {
   font-size: 16px;
   background-color: black;
 }
+.pop_up_overflow {
+  background: #ff000047;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .view-port {
   width: $view-port;
